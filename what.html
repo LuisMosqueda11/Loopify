@@ -301,20 +301,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Section header 
 const languageBtn = document.querySelector('.language-btn');
-            const dropdown = document.querySelector('.language-dropdown');
-        
-            if (languageBtn && dropdown) {
-                languageBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    dropdown.classList.toggle('open');
-                });
-        
-                document.addEventListener('click', () => {
-                    if (dropdown.classList.contains('open')) {
-                        dropdown.classList.remove('open');
-                    }
-                });
+        const dropdown = document.querySelector('.language-dropdown');
+        if (languageBtn && dropdown) {
+            languageBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('open');
+            });
+            document.addEventListener('click', () => 
+                if (dropdown.classList.contains('open')) {
+                dropdown.classList.remove('open');
             }
+        });
+        }
         });
     </script>
 </body>
