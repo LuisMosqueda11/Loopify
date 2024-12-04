@@ -107,6 +107,71 @@ header {
     }
 }
 
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.language-btn {
+    padding: 8px 16px;
+    border: 2px solid var(--color-tertiary);
+    color: var(--color-tertiary);
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.language-btn:hover {
+    background-color: var(--color-quaternary);
+    color: var(--color-primary);
+}
+
+.language-options {
+    position: absolute; 
+    z-index: 1000; 
+    background-color: var(--color-primary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width: 80px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    padding: 0 10px;
+}
+
+.language-options a {
+    display: block;
+    width: 65px;
+    padding: 10px 10px;
+    color: var(--color-tertiary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.language-options a:hover {
+    background-color: var(--color-quaternary);
+    color: var(--color-primary);
+}
+
+.language-dropdown.open .language-options {
+    max-height: 200px; 
+    padding: 10px 10px;
+}
+
+.language-dropdown.open .language-options a {
+    padding: 10px 15px;
+}
+
+.language-dropdown.open .language-options a {
+    font-size: 1rem;
+    padding: 12px;
+}
+
+
 /* Hero Section */
 .hero {
     position: relative;
