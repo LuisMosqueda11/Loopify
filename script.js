@@ -138,3 +138,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+
+document.querySelector('.language-btn').addEventListener('click', function (e) {
+        e.stopPropagation();
+        const dropdown = document.querySelector('.language-dropdown');
+        dropdown.classList.toggle('open');
+    });
+
+document.addEventListener('click', function () {
+        const dropdown = document.querySelector('.language-dropdown');
+        if (dropdown.classList.contains('open')) {
+            dropdown.classList.remove('open');
+        }
+    });
+
