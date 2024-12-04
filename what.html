@@ -281,27 +281,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentIndex = 0;
 
-    // Función para actualizar el carrusel
     function updateCarousel() {
-        const offset = -currentIndex * 100; // Mueve el slider por porcentaje
+        const offset = -currentIndex * 100; 
         slider.style.transform = `translateX(${offset}%)`;
     }
 
-    // Evento del botón "anterior"
     prevButton.addEventListener('click', () => {
         currentIndex = (currentIndex > 0) ? currentIndex - 1 : testimonials.length - 1;
         updateCarousel();
     });
 
-    // Evento del botón "siguiente"
     nextButton.addEventListener('click', () => {
         currentIndex = (currentIndex < testimonials.length - 1) ? currentIndex + 1 : 0;
         updateCarousel();
     });
 
-    // Actualización inicial para garantizar que todo esté alineado
     updateCarousel();
 });
+
+// Section header 
+const languageBtn = document.querySelector('.language-btn');
+            const dropdown = document.querySelector('.language-dropdown');
+        
+            if (languageBtn && dropdown) {
+                languageBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    dropdown.classList.toggle('open');
+                });
+        
+                document.addEventListener('click', () => {
+                    if (dropdown.classList.contains('open')) {
+                        dropdown.classList.remove('open');
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
