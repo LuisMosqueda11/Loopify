@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Loopify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/index.html" class="logo-container">
+                <img src="images/logo.png" alt="Logo de Loopify" class="logo">
+                <div class="logo-text">Loopify</div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/aboutus.html">Sobre nosotros</a></li>
+                <li><a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/trash.html#">Aprende más</a></li>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/aboutus.html">Nuestro impacto</a></li>
+            </ul>
+            <div class="cta-buttons">
+                <div class="language-dropdown">
+                    <button class="language-btn">🌐 Idioma</button>
+                    <div class="language-options">
+                        <a href="?lang=es">Español</a>
+                        <a href="?lang=en">English</a>
+                    </div>
+                </div>
+                <button class="contact-btn">Contacto</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-trash">
+            <h1>¿Qué tirar en cada contenedor?</h1>
+        </section>
+        <section class="board-section">
+            <h1 class="main-title">¿Estás clasificando correctamente tus residuos?</h1>
+            <p class="main-text">Aunque llevamos años reciclando y nuestra comprensión y conciencia siguen mejorando, algunos artículos aún terminan en el contenedor de reciclaje incorrecto, conocido comúnmente como "residuos impropios".</p>
+            <p class="main-text">¡Si no estás seguro de qué va en cada contenedor y quieres dominar la clasificación adecuada, sigue leyendo!</p>
+            <hr class="divider">
+            <div class="board-container">
+                <div class="board">
+                    <div class="board-header">
+                        <div class="image-text-container">
+                            <img src="images/bluebin.png" alt="Icono">
+                            <div class="board-info">
+                                <h2>Contenedor Azul</h2>
+                                <p>Papel y Cartón</p>
+                            </div>
+                        </div>
+                        <button class="toggle-button" onclick="toggleContent(this)">
+                            <span class="arrow">▶</span>
+                        </button>
+                    </div>                    
+                    <div class="board-content">
+                        <img src="images/paper.png" alt="Papel">
+                        <p>⦿ Los reciclables incluyen hojas de papel, revistas y cajas de cartón (aplanadas para un mejor uso del espacio).</p>
+                        <p>⦿ No incluyas artículos manchados de comida, papel encerado o fotografías.</p>
+                    </div>
+                </div>
+                <div class="board">
+                    <div class="board-header">
+                        <div class="image-text-container">
+                            <img src="images/yellowbin.png" alt="Icono">
+                            <div class="board-info">
+                                <h2>Contenedor Amarillo</h2>
+                                <p>Envases Ligeros</p>
+                            </div>
+                        </div>
+                        <button class="toggle-button" onclick="toggleContent(this)">
+                            <span class="arrow">▶</span>
+                        </button>
+                    </div>                    
+                    <div class="board-content">
+                        <img src="images/can.png" alt="Reducir el Consumo de Energía">
+                        <p>⦿ Acepta plásticos (botellas, envoltorios), latas, bricks (como cartones de leche) y bolsas de plástico.</p>
+                        <p>⦿ Antes de desecharlos, vacía y comprime los artículos, y guárdalos en una bolsa separada.</p>
+                    </div>
+                </div>                
+                <div class="board">
+                    <div class="board-header">
+                        <div class="image-text-container">
+                            <img src="images/greenbin.png" alt="Icono">
+                            <div class="board-info">
+                                <h2>Contenedor Verde</h2>
+                                <p>Vidrio</p>
+                            </div>
+                        </div>
+                        <button class="toggle-button" onclick="toggleContent(this)">
+                            <span class="arrow">▶</span>
+                        </button>
+                    </div>                    
+                    <div class="board-content">
+                        <img src="images/glass.png" alt="Reducir el Consumo de Energía">
+                        <p>⦿ Solo para botellas y frascos (sin tapas ni corchos).</p>
+                        <p>⦿ No incluyas cristal de ventanas, espejos ni cerámica.</p>
+                    </div> 
+                </div>
+                <div class="board">
+                    <div class="board-header">
+                        <div class="image-text-container">
+                            <img src="images/brownbin.png" alt="Icono">
+                            <div class="board-info">
+                                <h2>Contenedor Marrón</h2>
+                                <p>Residuos Orgánicos</p>
+                            </div>
+                        </div>
+                        <button class="toggle-button" onclick="toggleContent(this)">
+                            <span class="arrow">▶</span>
+                        </button>
+                    </div>                    
+                    <div class="board-content">
+                        <img src="images/foodscraps.png" alt="Reducir el Consumo de Energía">
+                        <p>⦿ Incluye restos de comida, cáscaras de huevo, posos de café y residuos similares.</p>
+                        <p>⦿ El compostaje es una excelente opción si tienes espacio, convirtiendo los residuos orgánicos en fertilizante natural.</p>
+                    </div> 
+                </div>
+                <div class="board">
+                    <div class="board-header">
+                        <div class="image-text-container">
+                            <img src="images/redbin.png" alt="Icono">
+                            <div class="board-info">
+                                <h2>Contenedor Rojo</h2>
+                                <p>Otros Residuos</p>
+                            </div>
+                        </div>
+                        <button class="toggle-button" onclick="toggleContent(this)">
+                            <span class="arrow">▶</span>
+                        </button>
+                    </div>                    
+                    <div class="board-content">
+                        <img src="images/batteries.png" alt="Reducir el Consumo de Energía">
+                        <p>⦿ Los medicamentos caducados deben llevarse a los puntos de recogida SIGRE en las farmacias.</p>
+                        <p>⦿ Los residuos peligrosos, electrónicos y las baterías deben ir a instalaciones de reciclaje especializadas o puntos de entrega.</p>
+                    </div>
+                </div>                         
+            </div>
+        </section>
+        <section class="promo-section">
+            <div class="promo-card">
+                <div class="promo-header">
+                    <div class="promo-image">
+                        <img src="images/where.png" alt="Promoción de Reciclaje">
+                    </div>
+                </div>
+                <div class="promo-content">
+                    <h1>Encuentra Centros de Reciclaje Locales: Descubre Dónde Depositar Tus Residuos por País</h1>
+                    <p>¿Quieres saber cómo y dónde disponer tus residuos de manera responsable? Encuentra fácilmente puntos de reciclaje y recogida cercanos, según tu país. Desde envases plásticos hasta residuos electrónicos, te ayudamos a localizar el lugar adecuado para cada tipo de basura, para que puedas hacer tu parte en la protección del medio ambiente. ¡Reciclar nunca fue tan fácil!</p>
+                </div>
+                <div class="promo-footer">
+                    <a href="https://search.earth911.com/?utm_source=earth911-header" class="promo-button">Encuentra tu Centro Local</a>
+                </div>
+            </div>
+        </section>
+        <section class="learn-more-section">
+            <h2>No te conformes con esta información, <br><span>aprende más con nosotros</span></h2>
+            <p>Consulta nuestros otros artículos:</p>
+            <div class="articles">
+                <div class="article">
+                    <img src="images/benefic.png" alt="¿Qué se puede reciclar?">
+                    <h3>¿Por qué es necesario el reciclaje?</h3>
+                    <hr />
+                    <p>Hoy más que nunca, es esencial tomar acción para cambiar el mundo.</p>
+                    <a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/benefict.html" class="arrows left-arrows"></a>
+                </div>
+                <div class="article">
+                    <img src="images/important.png" alt="Beneficios del reciclaje">
+                    <h3>¿Qué acciones simples pueden hacer las personas en casa para proteger el medio ambiente?</h3>
+                    <hr />
+                    <p>Descubre cómo muchas pequeñas acciones en casa pueden tener un gran impacto en el medio ambiente.</p>
+                    <a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/important.html#" class="arrows right-arrows"></a>
+                </div>
+            </div>
+        </section>
+        </main>
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-logo-contact">
+                    <img src="images/logo.png" alt="Logo de DTRE" class="footer-logo">
+                    <div class="footer-social">
+                        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                        <a href="#"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+                    </div>
+                    <button class="contact-button">Contacto</button>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <h4>Sobre nosotros</h4>
+                        <ul>
+                            <li><a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/aboutus.html">Nuestra misión</a></li>
+                            <li><a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/aboutus.html">Quiénes somos</a></li>
+                            <li><a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/aboutus.html">Informes anuales</a></li>
+                            <li><a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/aboutus.html">Proceso de reciclaje</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Preguntas frecuentes</h4>
+                        <ul>
+                            <li><a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/trash.html#">Guía de reciclaje</a></li>
+                            <li><a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/trash.html#">Materiales comunes</a></li>
+                            <li><a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/important.html#">Consejos para clasificar</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/aboutus.html">Portal de transparencia</a></li>
+                            <li><a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/trash.html#">Reducir, Reutilizar, Reciclar</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Beta</h4>
+                        <ul>
+                            <li><a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/aboutus.html">Formulario</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/aboutus.html">Aviso legal</a> |
+                <a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/aboutus.html">Política de privacidad</a> |
+                <a href="file:///Users/dr.jluismosqueda/Desktop/BYUI-ONLINE/GESCI%20110/aboutus.html">Política de cookies</a>
+            </div>
+        </footer>
+    <script>
+function toggleContent(button) {
+    const content = button.parentElement.nextElementSibling;
+    const arrow = button.querySelector('.arrow');
+    
+    if (content.style.display === 'block') {
+        content.style.display = 'none';
+        arrow.textContent = '▶';
+    } else {
+        content.style.display = 'block';
+        arrow.textContent = '▼';
+    }
+}
+        document.querySelector('.language-btn').addEventListener('click', function (e) {
+        e.stopPropagation();
+        const dropdown = document.querySelector('.language-dropdown');
+        dropdown.classList.toggle('open');
+    });
+
+document.addEventListener('click', function () {
+        const dropdown = document.querySelector('.language-dropdown');
+        if (dropdown.classList.contains('open')) {
+            dropdown.classList.remove('open');
+        }
+    });
+    </script>
+</body>
+</html> 
